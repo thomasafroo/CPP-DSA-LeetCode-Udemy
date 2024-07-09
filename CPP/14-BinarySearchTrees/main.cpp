@@ -26,7 +26,6 @@ class BinarySearchTree {
 
 
 
-
 int main() {
     BinarySearchTree* myBST = new BinarySearchTree();
     cout << "Root: " << myBST->root;
