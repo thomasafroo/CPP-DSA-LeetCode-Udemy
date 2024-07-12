@@ -19,6 +19,14 @@ class HashTable {
         static const int SIZE = 7;
         // static means store one 7 in memory
         Node* dataMap[SIZE];
-
     public: 
 };
+
+
+int main() {
+    HashTable* myHashTable = new HashTable(); // default constructor
+
+    myHashTable->printTable();
+
+    return 0;
+}
