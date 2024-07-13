@@ -11,7 +11,6 @@ class Node {
             this->key = key;
             this->value = value;
             next = nullptr;
-
         }
 };
 
