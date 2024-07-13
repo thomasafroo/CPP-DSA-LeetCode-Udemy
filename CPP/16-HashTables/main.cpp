@@ -33,11 +33,17 @@ class HashTable {
                 }
             }
         }
+        int hash(string key) {
+            int hash = 0;
+
+
+            return hash; 
+        }
 };
 
 
 int main() {
-    
+
     HashTable* myHashTable = new HashTable(); // default constructor
  
     myHashTable->printTable();
