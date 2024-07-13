@@ -37,6 +37,7 @@ class HashTable {
 
 
 int main() {
+    
     HashTable* myHashTable = new HashTable(); // default constructor
  
     myHashTable->printTable();
