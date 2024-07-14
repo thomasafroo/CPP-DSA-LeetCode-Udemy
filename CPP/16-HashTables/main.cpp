@@ -57,6 +57,14 @@ class HashTable {
                 temp->next = newNode; 
             }
         }
+
+        int get(string key) {
+            int index = hash(key);
+            Node* temp = dataMap[index];
+            while (temp != nullptr) {
+                
+            }
+        }
 };
 
 
