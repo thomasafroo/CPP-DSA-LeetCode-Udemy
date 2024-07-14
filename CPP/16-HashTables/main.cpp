@@ -33,7 +33,7 @@ class HashTable {
                 }
             }
         }
-        int hash(string key) {
+        int hash(string key) { // hash function
             int hash = 0;
             for (int i = 0; i < key.length(); i++) {
                 int asciiValue = int(key[i]);
@@ -49,6 +49,10 @@ class HashTable {
                 dataMap[index] = newNode;
             } else {
                 Node* temp = dataMap[index];
+                while (temp->next != nullptr) {
+                    temp = temp->next;
+                }
+                temp->next = newNode;
             }
         }
 };
