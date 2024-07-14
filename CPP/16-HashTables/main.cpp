@@ -33,7 +33,7 @@ class HashTable {
                 }
             }
         }
-        
+
         int hash(string key) { // hash function
             int hash = 0;
             for (int i = 0; i < key.length(); i++) {
@@ -63,8 +63,13 @@ class HashTable {
 int main() {
 
     HashTable* myHashTable = new HashTable(); // default constructor
- 
-    myHashTable->printTable();
 
+    myHashTable->set("nails", 100);
+    myHashTable->set("tile", 50);
+    myHashTable->set("lumber", 80);
+    myHashTable->set("bolts", 200);
+    myHashTable->set("screws", 140);
+
+    myHashTable->printTable();
     return 0;
 }
