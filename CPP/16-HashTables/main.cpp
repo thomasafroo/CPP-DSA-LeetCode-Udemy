@@ -52,7 +52,7 @@ class HashTable {
                 while (temp->next != nullptr) {
                     temp = temp->next;
                 }
-                temp->next = newNode;
+                temp->next = newNode; 
             }
         }
 };
