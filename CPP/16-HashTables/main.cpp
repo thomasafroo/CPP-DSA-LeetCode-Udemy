@@ -33,6 +33,7 @@ class HashTable {
                 }
             }
         }
+        
         int hash(string key) { // hash function
             int hash = 0;
             for (int i = 0; i < key.length(); i++) {
@@ -42,6 +43,7 @@ class HashTable {
 
             return hash; 
         }
+
         void set(string key, int value) {
             int index = hash(key);
             Node* newNode = new Node(key, value);
