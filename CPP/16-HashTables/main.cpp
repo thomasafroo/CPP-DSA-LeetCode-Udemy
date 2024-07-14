@@ -80,5 +80,6 @@ int main() {
     myHashTable->set("screws", 140);
 
     myHashTable->printTable();
+        
     return 0;
 }
