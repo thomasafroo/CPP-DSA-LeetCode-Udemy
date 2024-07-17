@@ -11,6 +11,8 @@ class Graph {
         bool addVertex(string vertex) {
             if (adjList.count(vertex) == 0) {
                 adjList[vertex];
+                return true;
             }
+            return false; 
         }
 };
