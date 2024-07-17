@@ -29,8 +29,11 @@ class Graph {
 };
 
 int main() {
+    Graph* myGraph = new Graph();
 
+    myGraph->addVertex("A");
 
+    myGraph->printGraph();
 
 
 
