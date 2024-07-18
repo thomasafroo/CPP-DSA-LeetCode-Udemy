@@ -79,7 +79,9 @@ int main() {
 
     myGraph->printGraph();
 
-    myGraph->removeEdge("A", "B");
+    myGraph->removeVertex("D");
+    cout << endl;
+    myGraph->printGraph();
 
     return 0;
 }
