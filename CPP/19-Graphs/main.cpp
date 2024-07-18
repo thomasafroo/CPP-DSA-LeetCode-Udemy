@@ -40,9 +40,9 @@ class Graph {
             if (adjList.count(vertex1) != 0 && adjList.count(vertex2) != 0) {
                 adjList.at(vertex1).erase(vertex2);
                 adjList.at(vertex2).erase(vertex1);
+                return true;
             }
-
-
+            return false;
         }
 
 };
