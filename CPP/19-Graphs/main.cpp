@@ -31,6 +31,7 @@ class Graph {
             adjList.at(vertex1).insert(vertex2);
             adjList.at(vertex2).insert(vertex1);
         }
+        
 
 };
 
