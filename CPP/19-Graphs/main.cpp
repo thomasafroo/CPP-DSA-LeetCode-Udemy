@@ -36,6 +36,11 @@ class Graph {
             return false;
         }
 
+        bool removeEdge(string vertex1, string vertex2) {
+            
+
+
+        }
 
 };
 
@@ -45,6 +50,8 @@ int main() {
     myGraph->addVertex("A");
     myGraph->addVertex("B");
     
+    myGraph->addEdge("A", "B");
+
     myGraph->printGraph();
 
 
