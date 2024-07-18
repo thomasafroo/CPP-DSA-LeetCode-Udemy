@@ -28,7 +28,7 @@ class Graph {
         }
 
         bool addEdge(string vertex1, string vertex2) {
-            adjList.at(vertex1);
+            adjList.at(vertex1).insert(vertex2);
         }
 
 };
