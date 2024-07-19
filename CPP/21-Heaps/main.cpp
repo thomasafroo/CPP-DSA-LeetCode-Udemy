@@ -25,6 +25,9 @@ class Heap {
         }
 
     public:
+        void printHeap() {
+            
+        }
         void insert(int value) {
             heap.push_back(value);
             int current = heap.size() - 1;
