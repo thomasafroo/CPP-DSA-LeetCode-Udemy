@@ -18,7 +18,5 @@ void funcOne() {
 }
 
 int main() {
-
     funcOne();
-    
 }
