@@ -35,7 +35,7 @@ class Heap {
             }
             cout << "]" << endl;
         }
-        
+
         void insert(int value) {
             heap.push_back(value);
             int current = heap.size() - 1;
@@ -43,7 +43,6 @@ class Heap {
             while (current > 0 && heap[current] > heap[parent(current)]) {
                 swap(current, parent(current));
                 current = parent(current);
-
             }
         }
 
