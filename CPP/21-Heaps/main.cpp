@@ -67,7 +67,7 @@ class Heap {
                 int leftIndex = leftChild(index);
                 int rightIndex = rightChild(index);
                 
-                if (heap[leftIndex] > heap[maxIndex]) {
+                if (leftIndex < heap.size() && heap[leftIndex] > heap[maxIndex]) {
                     maxIndex = leftIndex;
                 }
                 if (rightIndex < heap.size() && heap[rightIndex] > heap[maxIndex]) {
