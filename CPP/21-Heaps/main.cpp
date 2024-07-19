@@ -26,6 +26,7 @@ class Heap {
 
     public:
         void insert(int value) {
+            heap.push_back(value);
             
         }
 
