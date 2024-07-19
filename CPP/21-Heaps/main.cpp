@@ -24,6 +24,11 @@ class Heap {
             heap[index2] = temp;
         }
 
+    public:
+        void insert(int value) {
+            
+        }
+
 };
 
 
