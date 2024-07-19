@@ -7,11 +7,12 @@ int factorial(int n) {
     return n * factorial(n - 1);
 }
 
-
 int main() {
+    
     cout << "Enter a number to get its factorial: ";
     int n;
     cin >> n;
     cout << to_string(n) + "! = " << factorial(n) << endl;
+
     return 0;
 }
