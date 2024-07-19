@@ -70,7 +70,7 @@ class Heap {
                 if (heap[leftIndex] > heap[maxIndex]) {
                     maxIndex = leftIndex;
                 }
-                if (heap[rightIndex] > heap[maxIndex]) {
+                if (rightIndex < heap.size() && heap[rightIndex] > heap[maxIndex]) {
                     maxIndex = rightIndex;
                 }
                 if (maxIndex != index) {
