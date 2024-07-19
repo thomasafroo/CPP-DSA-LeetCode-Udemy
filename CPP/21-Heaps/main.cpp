@@ -45,6 +45,25 @@ class Heap {
                 current = parent(current);
             }
         }
+        int remove() {
+            if (heap.empty()) {
+                return INT_MIN;
+            }
+            int maxValue = heap.front();
+            
+            if (heap.size() == 1) {
+                heap.pop_back();
+            } else {
+                heap[0] = heap.back();
+                heap.pop_back();
+                sinkDown(0);
+            }
+
+            return maxValue;
+        }
+        void sinkDown(int index) {
+            
+        }
 
 };
 
@@ -60,7 +79,7 @@ int main() {
 
     myHeap->insert(100);
     myHeap->printHeap();
-    
+
     myHeap->insert(75);
     myHeap->printHeap();
 
