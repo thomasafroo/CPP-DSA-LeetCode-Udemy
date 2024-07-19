@@ -51,7 +51,18 @@ class Heap {
 
 
 int main() {
+    Heap* myHeap = new Heap();
+    myHeap->insert(99);
+    myHeap->insert(72);
+    myHeap->insert(61);
+    myHeap->insert(58);
+    myHeap->printHeap();
+
+    myHeap->insert(100);
+    myHeap->printHeap();
     
+    myHeap->insert(75);
+    myHeap->printHeap();
 
     return 0;
 } 
