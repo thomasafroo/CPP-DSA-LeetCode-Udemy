@@ -62,7 +62,13 @@ class Heap {
             return maxValue;
         }
         void sinkDown(int index) {
-            
+            int maxIndex = index;
+            while (true) {
+                int leftIndex = leftChild(index);
+                int rightIndex = rightChild(index);
+                
+                if (heap[leftIndex] > heap[maxIndex])
+            }
         }
 
 };
