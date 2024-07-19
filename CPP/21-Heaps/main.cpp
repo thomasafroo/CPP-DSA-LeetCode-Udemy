@@ -67,7 +67,16 @@ class Heap {
                 int leftIndex = leftChild(index);
                 int rightIndex = rightChild(index);
                 
-                if (heap[leftIndex] > heap[maxIndex])
+                if (heap[leftIndex] > heap[maxIndex]) {
+                    maxIndex = leftIndex;
+                }
+                if (heap[rightIndex] > heap[maxIndex]) {
+                    maxIndex = rightIndex;
+                }
+                if (maxIndex != index) {
+                    swap(index, maxIndex);
+                    index = maxIndex;
+                }
             }
         }
 
