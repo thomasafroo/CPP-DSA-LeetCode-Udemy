@@ -29,7 +29,7 @@ class Heap {
             heap.push_back(value);
             int current = heap.size() - 1;
 
-            while (current > 0) {
+            while (current > 0 && heap[current] > heap[parent(current)]) {
                 swap(current, parent(current));
                 current = parent(current);
 
