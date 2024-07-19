@@ -76,6 +76,8 @@ class Heap {
                 if (maxIndex != index) {
                     swap(index, maxIndex);
                     index = maxIndex;
+                } else {
+                    return;
                 }
             }
         }
