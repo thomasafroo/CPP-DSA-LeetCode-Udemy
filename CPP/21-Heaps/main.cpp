@@ -30,7 +30,6 @@ class Heap {
             int current = heap.size() - 1;
 
             while (current > 0) {
-
                 swap(current, parent(current));
                 current = parent(current);
 
