@@ -2,26 +2,69 @@
 using namespace std;
 
 class Node {
-    Node* left;
-    Node* right;
+    public: 
+        int value;
+        Node* left;
+        Node* right;
 
-
-
+        Node(int value) {
+            this->value = value;
+            left = nullptr;
+            right = nullptr;
+        }
 };
 
-bool rContains(Node* currentNode, int value) {
-    if (currentNode == nullptr) return false;
+class BinarySearchTree {
+    public:
+        Node* root;
 
-    if (currentNode->value == value) return true;
+    public:
+        BinarySearchTree() {
+            root = nullptr;
+        }
 
-    if (value < currentNode->value) {
-        return rContains(currentNode->left, value);
-    }
-}
+        bool insert(int value) {
+            Node* newNode = new Node(value);
+            if (root == nullptr) {
+                root = newNode;
+                return true;
+            }
+            Node* temp = root;
+            while (true) {
+                if (newNode->value == temp->value) return false;
+                if (newNode->value < temp->value) { // if the new node is less than the temp node
+                    if (temp->left == nullptr) {
+                        temp->left = newNode;
+                        return true;
+                    }
+                temp = temp->left;
+            } else {
+                if (temp->right == nullptr) {
+                    temp->right = newNode;
+                    return true;
+                }
+                temp = temp->right;
+                }
+            }
+        }
 
-bool rContains(int value) {
-    return rContains(root, value);
-}
+        bool contains(int value) {
+            if (root == nullptr) return false;
+            Node* temp = root;
+            while (temp) {
+                if (value < temp->value) {
+                    temp = temp->left;
+                } else if (value > temp->value) {
+                    temp = temp->right;
+                } else { // then temp = root
+                    return true;
+                }
+
+            }
+            return false;
+        }
+};
+
 
 
 int main() {
