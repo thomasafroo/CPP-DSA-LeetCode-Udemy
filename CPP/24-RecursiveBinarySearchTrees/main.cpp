@@ -1,6 +1,10 @@
 #include <iostream>
 using namespace std;
 
+class Node {
+
+    
+}
 
 bool rContains(Node* currentNode, int value) {
 
