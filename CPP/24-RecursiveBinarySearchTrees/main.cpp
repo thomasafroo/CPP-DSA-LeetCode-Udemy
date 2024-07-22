@@ -79,9 +79,15 @@ class BinarySearchTree {
         bool rContains(int value) {
             return rContains(root, value);
         }
+
+        Node* rInsert(Node* currentNode, int value) {
+
+        }
+
+        void rInsert(int value) {
+            rInsert(root, value);
+        }
 };
-
-
 
 int main() {
     BinarySearchTree* myBST = new BinarySearchTree();
