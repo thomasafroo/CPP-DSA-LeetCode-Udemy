@@ -63,11 +63,29 @@ class BinarySearchTree {
             }
             return false;
         }
+
+        bool rContains(Node* currentNode, int value) {
+            if (currentNode == nullptr) return false;
+
+            if (currentNode->value == value) return true;
+
+            if (value < currentNode->value) {
+                return rContains(currentNode->left, value);
+            } else {
+                return rContains(currentNode->right, value);
+            }
+        }
+
+        bool rContains(int value) {
+            return rContains(root, value);
+        }
 };
 
 
 
 int main() {
-
+    BinarySearchTree* myBST = new BinarySearchTree();
+    myBST->insert(47);
+    myBST->insert(21);
     return 0;
 }
