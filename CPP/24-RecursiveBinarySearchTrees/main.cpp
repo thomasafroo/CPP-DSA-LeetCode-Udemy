@@ -81,7 +81,9 @@ class BinarySearchTree {
         }
 
         Node* rInsert(Node* currentNode, int value) {
-
+            if (value < currentNode->value) {
+                currentNode->left = rInsert(currentNode->left, value);
+            }
         }
 
         void rInsert(int value) {
