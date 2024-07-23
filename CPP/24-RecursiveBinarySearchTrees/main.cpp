@@ -91,7 +91,7 @@ class BinarySearchTree {
         }
 
         void rInsert(int value) {
-            
+            if (root == nullptr) root = new Node(value);
             rInsert(root, value);
         }
 };
