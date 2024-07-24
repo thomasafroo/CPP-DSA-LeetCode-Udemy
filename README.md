@@ -1,6 +1,6 @@
 # C++ Data Structures &amp; Algorithms + LEETCODE Exercises
 
-This is a great course for software engineering interview prep. The link to the course: https://www.udemy.com/course/data-structures-algorithms-cpp/?couponCode=KEEPLEARNING.
+This is a great course for software engineering interview prep. Link to the course: https://www.udemy.com/course/data-structures-algorithms-cpp/?couponCode=KEEPLEARNING.
 
 The following is a list of topic covered:
 
