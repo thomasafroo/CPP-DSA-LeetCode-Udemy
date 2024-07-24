@@ -97,8 +97,10 @@ class BinarySearchTree {
 };
 
 int main() {
+
     BinarySearchTree* myBST = new BinarySearchTree();
     myBST->insert(47);
     myBST->insert(21);
+    
     return 0;
 }
