@@ -98,6 +98,8 @@ class BinarySearchTree {
         }
 
         Node* deleteNode(Node* currentNode, int value) {
+
+            if (currentNode == nullptr) return nullptr;
             if (value < currentNode->value) {
                 currentNode->left = deleteNode(currentNode->left, value);
             }
