@@ -96,6 +96,15 @@ class BinarySearchTree {
             if (root == nullptr) root = new Node(value);
             rInsert(root, value);
         }
+
+        Node* deleteNode(Node* currentNode, int value) {
+
+        }
+
+        void deletedNode(int value) {
+            root = deleteNode(root, value);
+        }
+
 };
 
 int main() {
@@ -108,5 +117,6 @@ int main() {
     cout << "\nRoot: " << myBST->getRoot()->value;
     cout << "\n\nRoot->left: " << myBST->getRoot()->left->value;
     cout << "\n\nRoot->Right: " << myBST->getRoot()->right->value;
+
     return 0;
 }
