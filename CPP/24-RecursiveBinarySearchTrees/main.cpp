@@ -117,6 +117,5 @@ int main() {
     cout << "\nRoot: " << myBST->getRoot()->value;
     cout << "\n\nRoot->left: " << myBST->getRoot()->left->value;
     cout << "\n\nRoot->Right: " << myBST->getRoot()->right->value;
-
     return 0;
 }
