@@ -98,7 +98,9 @@ class BinarySearchTree {
         }
 
         Node* deleteNode(Node* currentNode, int value) {
-            if (value < currentNode->value) {}
+            if (value < currentNode->value) {
+                currentNode->left = deleteNode(currentNode->left, value);
+            }
         }
 
         void deletedNode(int value) {
