@@ -105,7 +105,10 @@ class BinarySearchTree {
             } else if (value > currentNode->value) {
                 currentNode->right = deleteNode(currentNode->right, value);
             } else {
-                
+                if (currentNode->left == nullptr && currentNode->right == nullptr) {
+                    delete(currentNode);
+                    return nullptr;
+                }
             }
 
             return currentNode;
