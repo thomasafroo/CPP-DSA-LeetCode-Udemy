@@ -101,6 +101,6 @@ int main() {
     BinarySearchTree* myBST = new BinarySearchTree();
     myBST->insert(47);
     myBST->insert(21);
-
+    myBST->insert(3);
     return 0;
 }
