@@ -103,6 +103,7 @@ class BinarySearchTree {
             if (value < currentNode->value) {
                 currentNode->left = deleteNode(currentNode->left, value);
             }
+
             return currentNode;
         }
 
