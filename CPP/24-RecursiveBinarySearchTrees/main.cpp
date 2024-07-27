@@ -22,7 +22,9 @@ class BinarySearchTree {
         BinarySearchTree() {
             root = nullptr;
         }
-
+        Node* getRoot() {
+            return root;
+        }
         bool insert(int value) {
             Node* newNode = new Node(value);
             if (root == nullptr) {
@@ -102,5 +104,8 @@ int main() {
     myBST->insert(47);
     myBST->insert(21);
     myBST->insert(3);
+
+    cout << "\nRoot: " << myBST->getRoot()->value;
+    cout << "\n\nRoot->left: " << myBST->getRoot()->left->value;
     return 0;
 }
