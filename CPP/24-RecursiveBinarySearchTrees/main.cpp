@@ -150,6 +150,7 @@ int main() {
 
     cout << "\nMinValue from root:\n";
     cout << myBST->minValue(myBST->root) << endl;
+    
     cout << "\nMinValue from root->right:\n";
     cout << myBST->minValue(myBST->root->right);
     return 0;
