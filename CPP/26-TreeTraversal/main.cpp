@@ -99,14 +99,14 @@ class BinarySearchTree {
 
         void DFSPostOrder(Node* currentNode) {
             if (currentNode->left) {
-                DFSPreOrder(currentNode->left);
+                DFSPostOrder(currentNode->left);
             }
             if (currentNode->right) {
-                DFSPreOrder(currentNode->right);
+                DFSPostOrder(currentNode->right);
             }
             cout << currentNode->value << " ";
         }
-        
+
 
 };
 
