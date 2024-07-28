@@ -108,6 +108,16 @@ class BinarySearchTree {
                 if (currentNode->left == nullptr && currentNode->right == nullptr) {
                     delete(currentNode);
                     return nullptr;
+                } else if (currentNode->left == nullptr) {
+                    Node* temp = currentNode->right;
+                    delete(currentNode);
+                    return temp;
+                } else if (currentNode->right == nullptr) {
+                    Node* temp = currentNode->left;
+                    delete(currentNode);
+                    return temp;
+                } else {
+                    
                 }
             }
 
