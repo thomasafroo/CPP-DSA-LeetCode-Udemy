@@ -70,7 +70,7 @@ class BinarySearchTree {
         void BFS() {
             queue<Node*> myQueue;
             myQueue.push(root);
-            while (myQeuue.size() > 0) {
+            while (myQueue.size() > 0) {
                 Node* currentNode = myQueue.front();
                 myQueue.pop();
                 cout << currentNode->value << " ";
