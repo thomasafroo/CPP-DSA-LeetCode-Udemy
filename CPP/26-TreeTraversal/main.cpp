@@ -66,24 +66,25 @@ class BinarySearchTree {
             }
             return false;
         }
+
+        void BFS() {
+            queue<Node*> myQueue;
+            myQueue.push(root);
+            while (myQeuue.size() > 0) {
+                Node* currentNode = myQueue.front();
+                myQueue.pop();
+                cout << currentNode->value << " ";
+                if (currentNode->left != nullptr) {
+                    myQueue.push(currentNode->left);
+                }
+                if (currentNode->right != nullptr) {
+                    myQueue.push(currentNode->right);
+                }
+            }
+        }
 };
 
-void BFS() {
-    queue<Node*> myQueue;
-    myQueue.push(root);
-    while (myQeuue.size() > 0) {
 
-        Node* currentNode = myQueue.front();
-        myQueue.pop();
-        cout << currentNode->value << " ";
-        if (currentNode->left != nullptr) {
-            myQueue.push(currentNode->left);
-        }
-        if (currentNode->right != nullptr) {
-            myQueue.push(currentNode->right);
-        }
-    }
-}
 
 
 
