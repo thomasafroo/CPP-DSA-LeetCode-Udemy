@@ -117,7 +117,7 @@ class BinarySearchTree {
                     delete(currentNode);
                     return temp;
                 } else {
-                    
+
                 }
             }
 
@@ -128,6 +128,9 @@ class BinarySearchTree {
             root = deleteNode(root, value);
         }
 
+        int minValue(Node* currentNode) {
+            
+        }
 
 };
 
