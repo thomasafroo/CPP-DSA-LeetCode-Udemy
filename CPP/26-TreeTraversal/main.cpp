@@ -110,6 +110,20 @@ class BinarySearchTree {
             DFSPreOrder(root);
         }
 
+        void DFSInOrder(Node* currentNode) {
+            if (currentNode->left) {
+                DFSInOrder(currentNode->left);
+            }
+            cout << currentNode->value << " ";
+            if (currentNode->right) {
+                DFSInOrder(currentNode->right);
+            }
+        }
+        void DFSInOrder() {
+            DFSInOrder(root);
+        }
+
+
 };
 
 
