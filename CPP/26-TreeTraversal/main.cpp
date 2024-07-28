@@ -83,9 +83,11 @@ class BinarySearchTree {
             }
         }
 
-        void DFS() {
-            
+        void DFSPreOrder(Node* currentNode) {
+
+
         }
+        
 };
 
 
