@@ -117,7 +117,9 @@ class BinarySearchTree {
                     delete(currentNode);
                     return temp;
                 } else {
-
+                    int subTreeMin = minValue(currentNode->right);
+                    currentNode->value = subTreeMin;
+                    currentNode->right = deleteNode(currentNode->right, subTreeMin);
                 }
             }
 
@@ -150,7 +152,7 @@ int main() {
 
     cout << "\nMinValue from root:\n";
     cout << myBST->minValue(myBST->root) << endl;
-    
+
     cout << "\nMinValue from root->right:\n";
     cout << myBST->minValue(myBST->root->right);
     return 0;
