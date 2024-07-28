@@ -82,6 +82,10 @@ class BinarySearchTree {
                 }
             }
         }
+
+        void DFS() {
+            
+        }
 };
 
 
