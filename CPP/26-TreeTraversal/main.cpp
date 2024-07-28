@@ -3,7 +3,9 @@
 
 using namespace std;
 
-
+class Node {
+    
+}
 void BFS() {
     queue<Node*> myQueue;
     myQueue.push(root);
