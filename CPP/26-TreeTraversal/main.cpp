@@ -15,7 +15,8 @@ class Node {
             left = nullptr;
             right = nullptr;
         }
-}
+};
+
 void BFS() {
     queue<Node*> myQueue;
     myQueue.push(root);
