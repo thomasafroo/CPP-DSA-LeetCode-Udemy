@@ -92,7 +92,9 @@ class BinarySearchTree {
                 DFSPreOrder(currentNode->right);
             }
         }
-
+        void DFSPreOrder() {
+            DFSPreOrder(root);
+        }
 };
 
 
