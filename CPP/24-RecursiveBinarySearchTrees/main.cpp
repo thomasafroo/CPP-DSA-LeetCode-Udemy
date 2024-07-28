@@ -132,6 +132,7 @@ class BinarySearchTree {
             while (currentNode->left != nullptr) {
                 currentNode = currentNode->left;
             }
+            return currentNode->value;
         }
 
 };
