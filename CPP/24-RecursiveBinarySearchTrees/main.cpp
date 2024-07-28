@@ -148,8 +148,9 @@ int main() {
     cout << "\n\nRoot->left: " << myBST->getRoot()->left->value;
     cout << "\n\nRoot->Right: " << myBST->getRoot()->right->value;
 
+    cout << "\nMinValue from root:\n";
     cout << myBST->minValue(myBST->root) << endl;
-
+    cout << "\nMinValue from root->right:\n";
     cout << myBST->minValue(myBST->root->right);
     return 0;
 }
