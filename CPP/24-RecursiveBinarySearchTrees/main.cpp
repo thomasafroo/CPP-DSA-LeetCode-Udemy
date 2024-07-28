@@ -126,9 +126,7 @@ class BinarySearchTree {
             return currentNode;
         }
 
-        void deletedNode(int value) {
-            root = deleteNode(root, value);
-        }
+        void deletedNode(int value) { root = deleteNode(root, value); }
 
         int minValue(Node* currentNode) {
             while (currentNode->left != nullptr) {
