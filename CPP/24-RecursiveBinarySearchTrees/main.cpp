@@ -129,7 +129,9 @@ class BinarySearchTree {
         }
 
         int minValue(Node* currentNode) {
-            
+            while (currentNode->left != nullptr) {
+                
+            }
         }
 
 };
