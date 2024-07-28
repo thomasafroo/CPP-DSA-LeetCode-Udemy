@@ -149,5 +149,7 @@ int main() {
     cout << "\n\nRoot->Right: " << myBST->getRoot()->right->value;
 
     cout << myBST->minValue(myBST->root) << endl;
+
+    cout << myBST->minValue(myBST->root->right);
     return 0;
 }
