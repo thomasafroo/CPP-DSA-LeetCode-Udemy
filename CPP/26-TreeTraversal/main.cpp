@@ -106,7 +106,9 @@ class BinarySearchTree {
             }
             cout << currentNode->value << " ";
         }
-
+        void DFSPostOrder() {
+            DFSPreOrder(root);
+        }
 
 };
 
@@ -126,6 +128,6 @@ int main() {
     myBST->insert(52);
     myBST->insert(82);
 
-    myBST->BFS();
+    myBST->DFSPostOrder();
     return 0;
 }
