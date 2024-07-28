@@ -84,10 +84,13 @@ class BinarySearchTree {
         }
 
         void DFSPreOrder(Node* currentNode) {
-
+            cout << currentNode->value << " ";
+            if (currentNode->left) {
+                
+            }
 
         }
-        
+
 };
 
 
