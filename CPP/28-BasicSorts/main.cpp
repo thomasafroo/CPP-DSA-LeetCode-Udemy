@@ -19,6 +19,12 @@ int main() {
     int myArray[] = {6,4,2,5,1,3};
 
     int size = sizeof(myArray) / sizeof(myArray[0]);
+
+    bubbleSort(myArray, size);
+
+    for (auto value : myArray) {
+        cout << value << " ";
+    }
     return 0;
 }
 
