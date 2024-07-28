@@ -140,8 +140,8 @@ class BinarySearchTree {
 int main() {
 
     BinarySearchTree* myBST = new BinarySearchTree();
-    myBST->insert(47);
-    myBST->insert(21);
+    myBST->insert(2);
+    myBST->insert(1);
     myBST->insert(3);
 
     cout << "\nRoot: " << myBST->getRoot()->value;
