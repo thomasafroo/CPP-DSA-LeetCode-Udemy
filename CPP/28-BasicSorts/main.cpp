@@ -44,5 +44,11 @@ int main() {
         cout << value << " ";
     }
 
+    selectionSort(myArray, size);
+
+    for (auto value : myArray) {
+        cout << value << " ";
+    }
+        
     return 0;
 }
