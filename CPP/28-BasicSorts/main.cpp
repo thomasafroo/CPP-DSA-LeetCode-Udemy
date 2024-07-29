@@ -2,6 +2,7 @@
 using namespace std;
 
 // bubble sort algorithm
+// puts the largest element in the array at the end, and then the next iteration excludes it.
 
 void bubbleSort(int array[], int size) {
     for (int i = size - 1; i > 0; i--) {
