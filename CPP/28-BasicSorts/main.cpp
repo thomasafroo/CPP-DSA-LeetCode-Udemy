@@ -16,6 +16,10 @@ void bubbleSort(int array[], int size) {
     }
 }
 
+void selectionSort(int array[], int size) {
+    
+}
+
 int main() {
 
     int myArray[] = {6,4,2,5,1,3};
