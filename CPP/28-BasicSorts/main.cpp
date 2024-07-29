@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
 
+// bubble sort algorithm
 
 void bubbleSort(int array[], int size) {
     for (int i = size - 1; i > 0; i--) {
@@ -25,6 +26,6 @@ int main() {
     for (auto value : myArray) {
         cout << value << " ";
     }
-    
+
     return 0;
 }
