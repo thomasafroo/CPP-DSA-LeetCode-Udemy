@@ -25,5 +25,6 @@ int main() {
     for (auto value : myArray) {
         cout << value << " ";
     }
+    
     return 0;
 }
