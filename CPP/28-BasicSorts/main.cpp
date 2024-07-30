@@ -36,7 +36,7 @@ void insertionSort(int array[], int size) {
     for (int i = 1; i < size; i++) {
         int temp = array[i];
         int j = i - 1;
-        while (temp < array[i]) {
+        while (j > -1 && temp < array[i]) {
             array[j+1] = array[j];
             array[j] = temp;
             j--;
