@@ -32,6 +32,17 @@ void selectionSort(int array[], int size) {
     }
 }
 
+void insertionSort(int array[], int size) {
+    for (int i = 1; i < size; i++) {
+        int temp = array[i];
+        int j = i - 1;
+        while (temp < array[i]) {
+            
+        }
+    }
+
+}
+
 int main() {
 
     int myArray[] = {6,4,2,5,1,3};
@@ -49,6 +60,6 @@ int main() {
     for (auto value : myArray) {
         cout << value << " ";
     }
-        
+
     return 0;
 }
