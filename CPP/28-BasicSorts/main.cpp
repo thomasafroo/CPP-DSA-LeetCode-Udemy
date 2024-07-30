@@ -38,6 +38,8 @@ void insertionSort(int array[], int size) {
         int j = i - 1;
         while (temp < array[i]) {
             array[j+1] = array[j];
+            array[j] = temp;
+            j--;
         }
     }
 
