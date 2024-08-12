@@ -42,7 +42,7 @@ class LinkedList {
                 temp = temp->next;
             }
         }
-
+        // simply return the instance field
         void getHead() {
             if (head == nullptr) {
                 cout << "Head: nullptr" << endl;
@@ -50,13 +50,13 @@ class LinkedList {
                 cout << "Head: " << head->value << endl;
             }
         }
-
+        // simply return the instance field
         void getTail() {
             if (tail == nullptr) {
                 cout << "Tail: nullptr" << endl;
             } else { 
                 cout << "Tail: " << tail->value << endl;
-            }  
+            }
         }
 
         void getLength() {
