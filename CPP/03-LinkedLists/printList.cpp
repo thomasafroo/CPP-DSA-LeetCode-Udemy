@@ -1,5 +1,7 @@
 #include <iostream>
+
 using namespace std;
+
 
 class Node { 
     public:
@@ -12,6 +14,7 @@ class Node {
         }
 }; 
 
+
 class LinkedList {
     private:
         Node* head;
@@ -20,15 +23,15 @@ class LinkedList {
 
     public:
         LinkedList(int value) {
-            Node* newNode = new Node(value);  // create a new node
-            head = newNode; // head points to a new node
-            tail = newNode; // tail points to a new node
+            Node* newNode = new Node(value);
+            head = newNode;
+            tail = newNode;
             length = 1;
         }
 
-        ~LinkedList() { // destructor
+        ~LinkedList() {
             Node* temp = head;
-            while (head) { // while head is not equal to nullptr
+            while (head) {
                 head = head->next;
                 delete temp;
                 temp = head;
@@ -42,7 +45,7 @@ class LinkedList {
                 temp = temp->next;
             }
         }
-        // simply return the instance field
+
         void getHead() {
             if (head == nullptr) {
                 cout << "Head: nullptr" << endl;
@@ -50,13 +53,13 @@ class LinkedList {
                 cout << "Head: " << head->value << endl;
             }
         }
-        // simply return the instance field
+
         void getTail() {
             if (tail == nullptr) {
                 cout << "Tail: nullptr" << endl;
             } else { 
                 cout << "Tail: " << tail->value << endl;
-            }
+            }  
         }
 
         void getLength() {
@@ -65,7 +68,7 @@ class LinkedList {
 
         void append(int value) {
             Node* newNode = new Node(value);
-            if (length == 0) { // or head == nullptr or tail == nullptr
+            if (length == 0) {
                 head = newNode;
                 tail = newNode;
             } else {
@@ -78,19 +81,108 @@ class LinkedList {
         void deleteLast() {
             if (length == 0) return;
             Node* temp = head;
-            Node* pre = head;
-            while(temp->next) {
-                pre = temp;
-                temp = temp->next;
-            }
-            tail = pre;
-            tail->next = nullptr;
-            length--;
-            if (length == 0) {
+            if (length == 1) {
                 head = nullptr;
                 tail = nullptr;
+            } else {
+                Node* pre = head;
+                while(temp->next) {
+                    pre = temp;
+                    temp = temp->next;
+                }
+                tail = pre;
+                tail->next = nullptr;
             }
             delete temp;
+            length--;            
+        }
+
+        void prepend(int value) {
+            Node* newNode = new Node(value);
+            if (length == 0) {
+                head = newNode;
+                tail = newNode;
+            } else {
+                newNode->next = head;
+                head = newNode;
+            }
+            length++;
+        }
+
+       void deleteFirst() {
+            if (length == 0) return;
+            Node* temp = head;
+            if (length == 1) {
+                head = nullptr;
+                tail = nullptr;
+            } else {
+                head = head->next;
+            }
+            delete temp;
+            length--;
+        }
+
+        Node* get(int index) {
+            if (index < 0 || index >= length) return nullptr;
+            Node* temp = head;
+            for (int i = 0; i < index; ++i) {
+                temp = temp->next;
+            }
+            return temp;
+        }
+
+        bool set(int index, int value) {
+            Node* temp = get(index);
+            if (temp) {
+                temp->value = value;
+                return true;
+            } 
+            return false;
+        }
+
+        bool insert(int index, int value) {
+            if (index < 0 || index > length) return false;
+            if (index == 0) {
+                prepend(value);
+                return true;
+            }
+            if (index == length) {
+                append(value);
+                return true;
+            }
+            Node* newNode = new Node(value);
+            Node* temp = get(index - 1);
+            newNode->next = temp->next;
+            temp->next = newNode;
+            length++;
+            return true;
+        }       
+
+        void deleteNode(int index) {
+            if (index < 0 || index >= length) return;
+            if (index == 0) return deleteFirst();
+            if (index == length - 1) return deleteLast();
+
+            Node* prev = get(index - 1);
+            Node* temp = prev->next;
+
+            prev->next = temp->next;
+            delete temp;
+            length--;        
+        }
+
+        void reverse() {
+            Node* temp = head;
+            head = tail;
+            tail = temp;
+            Node* after = temp->next;
+            Node* before = nullptr;
+            for (int i = 0; i < length; ++i) {
+                after = temp->next;
+                temp->next = before;
+                before = temp;
+                temp = after;
+            }
         }
 
 };
@@ -101,45 +193,34 @@ int main() {
         
     LinkedList* myLinkedList = new LinkedList(1);
     myLinkedList->append(2);
+    myLinkedList->append(3);
+    myLinkedList->append(4);
 
-
-    cout << "LL before deleteLast():\n";
+    cout << "LL before reverse():" << endl;
     myLinkedList->printList();
 
+    myLinkedList->reverse();
 
-    myLinkedList->deleteLast();
-    cout << "\n\nLL after 1st deleteLast():\n";
-    myLinkedList->printList();
-
-
-    myLinkedList->deleteLast();
-    cout << "\n\nLL after 2nd deleteLast():\n";
-    myLinkedList->printList();
+    cout << "\nLL after reverse():\n";
+    myLinkedList->printList();  
 
 
-    myLinkedList->deleteLast();
-    cout << "\n\nLL after 3rd deleteLast():\n";
-    myLinkedList->printList();
-
-
-    /*  
-        EXPECTED OUTPUT:
-    	----------------
-        LL before deleteLast():
+    /*  EXPECTED OUTPUT:
+        ----------------
+        LL before reverse():
         1
         2
+        3
+        4
 
-
-        LL after 1st deleteLast():
+        LL after reverse():
+        4
+        3
+        2
         1
 
-
-        LL after 2nd deleteLast():
-
-
-        LL after 3rd deleteLast():
-        
     */
         
 }
+
 
