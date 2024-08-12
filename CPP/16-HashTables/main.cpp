@@ -20,7 +20,7 @@ class HashTable {
         // static means store one 7 in memory
         Node* dataMap[SIZE];
 
-    public: 
+    public:
         void printTable() {
             for (int i = 0; i < SIZE; i++) {
                 cout << i << ":" << endl;
@@ -41,7 +41,7 @@ class HashTable {
                 hash = (hash + asciiValue * 23) % SIZE;
             }
 
-            return hash; 
+            return hash;
         }
 
         void set(string key, int value) {
