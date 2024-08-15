@@ -156,7 +156,7 @@ class LinkedList {
             temp->next = newNode;
             length++;
             return true;
-        }       
+        }    
 
         void deleteNode(int index) {
             if (index < 0 || index >= length) return;
