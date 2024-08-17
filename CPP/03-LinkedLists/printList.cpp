@@ -194,7 +194,7 @@ int main() {
     LinkedList* myLinkedList = new LinkedList(1);
     myLinkedList->append(2);
     myLinkedList->append(3);
-    myLinkedList->append(4);
+    myLinkedList->append(4); 
 
     cout << "LL before reverse():" << endl;
     myLinkedList->printList();
