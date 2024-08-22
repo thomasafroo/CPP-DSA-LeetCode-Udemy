@@ -1,16 +1,16 @@
 #include <iostream>
 using namespace std;
 
-int binarySearch(int arr[], int low, int high, int x) {
+int binarySearch(int arr[], int x) {
+    int low = 0;
+    int high = sizeof(arr) - 1;
+
     while (low <= high) {
         int mid = low + (high - low) / 2;
-
-        // check if x is at present at mid 
+        
         if (arr[mid] == x) {
             return mid;
         }
-
-        // if x is greater, then ignore the left half
         if (arr[mid] < x) {
             low = mid + 1;
         } else {
